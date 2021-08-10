@@ -3,6 +3,7 @@ This explains how to renew k8s certs using kubeadm.
 
 ## kubeadm certs commands
 k8s version 1.20+ ``` kubeadm certs```
+
 k8s version < 1.20 ``` kubeadm alpha certs```
 
 ## 1. check current expiry date for certs
