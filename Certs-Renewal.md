@@ -1,7 +1,9 @@
-# k8s-certs-management
-
-# certs renewal
+# k8s certs renewal
 This explains how to renew k8s certs using kubeadm.
+
+## kubeadm certs commands
+k8s version 1.20+ ``` kubeadm certs```
+k8s version < 1.20 ``` kubeadm alpha certs```
 
 ## 1. check current expiry date for certs
 
@@ -37,7 +39,7 @@ cp /etc/kubernetes/scheduler.conf /etc/kubernetes/scheduler.conf.backup
 
 ```kubeadm alpha certs renew all```
 
-## 1. verify the new expiry date for certs
+## 4. verify the new expiry date for certs
 
 ```kubeadm alpha certs check-expiration
 
@@ -53,3 +55,21 @@ CERTIFICATE AUTHORITY   EXPIRES                  RESIDUAL TIME   EXTERNALLY MANA
 ca                      Aug 25, 2030 12:14 UTC   9y              no
 front-proxy-ca          Aug 25, 2030 12:14 UTC   9y              no
 ```
+## 5. get the nodes
+
+verify that you can get the nodes
+
+```
+kubectl get no
+
+NAME                                 STATUS                     ROLES    AGE    VERSION
+node1                                Ready                      master   343d   v1.18.8
+node2                                Ready                      master   343d   v1.18.8
+node3                                Ready                      master   348d   v1.18.8
+node4                                Ready                      worker   348d   v1.18.8
+node5                                Ready                      worker   348d   v1.18.8
+node6                                Ready                      worker   348d   v1.18.8
+
+
+```
+
