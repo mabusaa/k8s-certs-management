@@ -37,3 +37,19 @@ cp /etc/kubernetes/scheduler.conf /etc/kubernetes/scheduler.conf.backup
 
 ```kubeadm alpha certs renew all```
 
+## 1. verify the new expiry date for certs
+
+```kubeadm alpha certs check-expiration
+
+CERTIFICATE                EXPIRES                  RESIDUAL TIME   CERTIFICATE AUTHORITY   EXTERNALLY MANAGED
+admin.conf                 Aug 10, 2022 18:01 UTC   364d                                    no
+apiserver                  Aug 10, 2022 18:01 UTC   364d            ca                      no
+apiserver-kubelet-client   Aug 10, 2022 18:01 UTC   364d            ca                      no
+controller-manager.conf    Aug 10, 2022 18:01 UTC   364d                                    no
+front-proxy-client         Aug 10, 2022 18:01 UTC   364d            front-proxy-ca          no
+scheduler.conf             Aug 10, 2022 18:01 UTC   364d                                    no
+
+CERTIFICATE AUTHORITY   EXPIRES                  RESIDUAL TIME   EXTERNALLY MANAGED
+ca                      Aug 25, 2030 12:14 UTC   9y              no
+front-proxy-ca          Aug 25, 2030 12:14 UTC   9y              no
+```
