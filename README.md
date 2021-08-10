@@ -3,7 +3,7 @@
 # certs renewal
 This explains how to renew k8s certs using kubeadm.
 
-##1. check current expiry date for certs
+## 1. check current expiry date for certs
 
 `kubeadm alpha certs check-expiration
 
@@ -21,7 +21,7 @@ front-proxy-ca          Aug 25, 2030 12:14 UTC   9y              no
 
 `
 
-##2. backup cluster certs directories and conf files
+## 2. backup cluster certs directories and conf files
 
 `
 cp -R /etc/kubernetes/ssl /etc/kubernetes/ssl.backup
@@ -33,7 +33,7 @@ cp /etc/kubernetes/kubelet.conf /etc/kubernetes/kubelet.conf.backup
 cp /etc/kubernetes/scheduler.conf /etc/kubernetes/scheduler.conf.backup
 `
 
-##3. renew certificates
+## 3. renew certificates
 
 `kubeadm alpha certs renew all`
 
