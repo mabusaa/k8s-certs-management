@@ -8,7 +8,9 @@ k8s version < 1.20 ``` kubeadm alpha certs```
 
 ## 1. check current expiry date for certs
 
-```kubeadm alpha certs check-expiration
+```kubeadm alpha certs check-expiration```
+
+```
 
 CERTIFICATE                EXPIRES                  RESIDUAL TIME   CERTIFICATE AUTHORITY   EXTERNALLY MANAGED
 admin.conf                 Aug 27, 2021 12:16 UTC   16d                                     no
@@ -42,8 +44,8 @@ cp /etc/kubernetes/scheduler.conf /etc/kubernetes/scheduler.conf.backup
 
 ## 4. verify the new expiry date for certs
 
-```kubeadm alpha certs check-expiration
-
+```kubeadm alpha certs check-expiration```
+```
 CERTIFICATE                EXPIRES                  RESIDUAL TIME   CERTIFICATE AUTHORITY   EXTERNALLY MANAGED
 admin.conf                 Aug 10, 2022 18:01 UTC   364d                                    no
 apiserver                  Aug 10, 2022 18:01 UTC   364d            ca                      no
