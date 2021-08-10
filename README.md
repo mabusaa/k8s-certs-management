@@ -29,12 +29,12 @@ front-proxy-ca          Aug 25, 2030 12:14 UTC   9y              no
 ## 2. backup cluster certs directories and conf files
 
 ```
-cp -R /etc/kubernetes/ssl /etc/kubernetes/ssl.backup \
-cp -R  /etc/ssl/etcd/ /etc/ssl/etcd.backup \
-cp -R  /etc/kubernetes/pki/ /etc/kubernetes/pki.backup \
-cp /etc/kubernetes/admin.conf /etc/kubernetes/admin.conf.backup \
-cp /etc/kubernetes/controller-manager.conf /etc/kubernetes/controller-manager.conf.backup \
-cp /etc/kubernetes/kubelet.conf /etc/kubernetes/kubelet.conf.backup \
+cp -R /etc/kubernetes/ssl /etc/kubernetes/ssl.backup 
+cp -R  /etc/ssl/etcd/ /etc/ssl/etcd.backup 
+cp -R  /etc/kubernetes/pki/ /etc/kubernetes/pki.backup 
+cp /etc/kubernetes/admin.conf /etc/kubernetes/admin.conf.backup 
+cp /etc/kubernetes/controller-manager.conf /etc/kubernetes/controller-manager.conf.backup 
+cp /etc/kubernetes/kubelet.conf /etc/kubernetes/kubelet.conf.backup 
 cp /etc/kubernetes/scheduler.conf /etc/kubernetes/scheduler.conf.backup 
 ```
 
